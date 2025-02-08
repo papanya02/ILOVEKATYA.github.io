@@ -1,0 +1,170 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    background: url('./Frame 3.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Заголовок */
+.main-section h1 {
+    color: #ff4893;
+    font-size: 2.5rem; /* Зменшено шрифт */
+    margin-bottom: 30px;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Основний блок */
+.main-section {
+    width: 80%;
+    background: rgba(255, 244, 244, 0.9);
+    color: #333;
+    padding: 5% 10%;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
+}
+
+/* Блок введення */
+#main {
+    width: 80%;
+    background: rgba(255, 244, 244, 0.95);
+    padding: 4% 10%;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Контейнер для полів вводу */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Поля вводу */
+input[type=text] {
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid #ff4893;
+    font-size: 1.1rem;
+    width: 45%;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Кнопка "+" між полями вводу */
+#add {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #ff4893;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Зміна при фокусуванні */
+input[type=text]:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff4893;
+}
+
+/* Кнопка додавання */
+#add:hover {
+    transform: rotate(180deg);
+}
+
+/* Кнопка обчислення */
+#calc {
+    padding: 15px 30px;
+    width: 35%;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    color: #fff;
+    border: none;
+    background: #ff4893;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease-in-out;
+}
+
+/* Зміна кольору кнопки при наведенні */
+#calc:hover {
+    background: #e03c7d;
+    transform: scale(1.1);
+}
+
+/* Відступ для результату */
+#button {
+    margin-top: 50px;
+}
+
+/* Футер */
+footer {
+    width: 80%;
+    padding: 3%;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 25px;
+}
+
+/* Результат */
+#output {
+    color: #ff4893;
+    font-size: 2.5rem;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+/* Символ серця */
+.heart {
+    color: #ff4893;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
